@@ -1,0 +1,60 @@
+services:
+  mysql:
+    image: mysql:5.7
+    platform: linux/amd64
+    ports:
+      - "3310:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=rootpwd
+      - MYSQL_DATABASE=auth-db
+      - MYSQL_USER=user
+      - MYSQL_PASSWORD=pwd
+    volumes:
+      - ./PetBase-service/src/main/resources/1_schema.sql:/docker-entrypoint-initdb.d/1_schema.sql
+      - ./PetBase-service/src/main/resources/2_data.sql:/docker-entrypoint-initdb.d/2_data.sql
+    healthcheck:
+      test: [ "CMD", "mysqladmin", "ping", "-uuser", "-ppwd", "-h", "127.0.0.1" ]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+
+  phpmyadmin:
+    image: phpmyadmin:5.2.0
+    container_name: phpmyadmin
+    links:
+      - mysql
+    restart: always
+    ports:
+      - 5013:80
+    environment:
+      - PMA_ARBITRARY=1
+
+  petbase-frontend:
+    image: petbase-frontend
+    container_name: petbase-frontend
+    build:
+      context: ./PetBase-frontend
+      dockerfile: Dockerfile
+      args:
+        - BUILD_MODE=development
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./PetBase-frontend/src:/app/src
+    environment:
+      - NODE_OPTIONS=--openssl-legacy-provider
+
+  petbase-service:
+    build: PetBase-service
+    ports:
+      - "8080:8080"
+    hostname: petbase-service
+    depends_on:
+      mysql:
+        condition: service_healthy
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+      - SPRING_DATASOURCE_URL=jdbc:mysql://mysql:3306/auth-db
+      - SPRING_DATASOURCE_USERNAME=user
+      - SPRING_DATASOURCE_PASSWORD=pwd

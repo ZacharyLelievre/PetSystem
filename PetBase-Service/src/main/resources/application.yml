@@ -1,0 +1,38 @@
+server:
+  error:
+    include-message: always
+
+logging:
+  level:
+    root: INFO
+    com.lelievre: DEBUG
+    org.hibernate.SQL: DEBUG
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+
+---
+# recommend setting this to "none" in a production environment
+spring.jpa.hibernate.ddl-auto: none
+
+#for h2
+spring:
+  profiles:
+    active: docker
+
+  datasource:
+    url: jdbc:mysql://mysql:3306/auth-db
+    username: user
+    password: pwd
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+
+    defer-datasource-initialization: true
+
+  sql:
+    init:
+      platform: h2
+      mode: always
