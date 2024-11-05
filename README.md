@@ -1,6 +1,6 @@
-# PetBase Management System
+# PetSystem Management
 
-PetBase is a full-stack application for managing pet shelter and pet adoption services, developed with Spring Boot, MySQL, Docker, and React. The application enables shelter administrators to manage pet details, shelter information, and provides a user-friendly interface for potential adopters to explore available pets. 
+PetSystem is a full-stack application for managing pet shelter and pet adoption services, developed with Spring Boot, MySQL, Docker, and React. The application enables shelter administrators to manage pet details, shelter information, and provides a user-friendly interface for potential adopters to explore available pets. 
 
 ## Features
 
