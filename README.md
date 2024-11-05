@@ -28,5 +28,5 @@ PetBase is a full-stack application for managing pet shelter and pet adoption se
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/yourusername/PetBase.git
+   git clone https://github.com/ZacharyLelievre/PetBase.git
    cd PetBase
