@@ -1,0 +1,4 @@
+[submodule "PetBase-frontend"]
+    path = PetBase-frontend
+    url = <URL>
+
