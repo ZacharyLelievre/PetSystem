@@ -1,0 +1,42 @@
+/* src/components/PetDetails.css */
+.pet-details-container {
+    margin-top: 40px;
+}
+
+.pet-image {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.pet-info {
+    padding-top: 20px;
+}
+
+.pet-info h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #2a1760;
+}
+
+.pet-info p {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.shelter-info h4 {
+    margin-top: 30px;
+    font-size: 1.8rem;
+    color: #2a1760;
+}
+
+.shelter-info p {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.mt-3 {
+    margin-top: 20px;
+}

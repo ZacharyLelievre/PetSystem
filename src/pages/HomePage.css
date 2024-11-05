@@ -1,0 +1,147 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+/* Global Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.homepage-container {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+/* Header Section */
+.homepage-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #2a1760;
+}
+
+.homepage-header p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+/* Header Image */
+.header-image {
+    width: 80%;
+    max-width: 800px;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+    margin-top: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    object-position: 0 -1cm;
+}
+
+/* Mission Statement */
+.mission-statement h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #2a1760;
+}
+
+.mission-statement p {
+    font-size: 1.1rem;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto 40px;
+    line-height: 1.6;
+}
+
+/* Mission Image */
+.mission-image {
+    width: 80%;
+    max-width: 800px;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+    margin-top: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Animal Gallery */
+.animal-gallery h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #2a1760;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.animal-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 12px;
+    object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.animal-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+.homepage-footer {
+    background-color: #2a1760;
+    color: #ffffff;
+    padding: 20px 0;
+    margin-top: 60px;
+}
+
+.homepage-footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.homepage-footer a {
+    color: #ffffff;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.homepage-footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header-image, .mission-image {
+        width: 90%;
+        max-height: 300px;
+    }
+
+    .animal-image {
+        width: 150px;
+        height: 150px;
+    }
+
+    .homepage-header h1, .mission-statement h2, .animal-gallery h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .homepage-header h1, .mission-statement h2, .animal-gallery h2 {
+        font-size: 1.5rem;
+    }
+
+    .homepage-header p, .mission-statement p {
+        font-size: 1rem;
+    }
+}
