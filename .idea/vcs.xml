@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="VcsDirectoryMappings">
+<<<<<<< HEAD
     <mapping directory="" vcs="Git" />
+=======
+    <mapping directory="$PROJECT_DIR$/PetBase-frontend" vcs="Git" />
+>>>>>>> fa089d6 (Add PetBase-frontend as a regular folder)
   </component>
 </project>

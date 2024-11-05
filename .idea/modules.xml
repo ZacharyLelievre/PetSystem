@@ -2,7 +2,13 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+<<<<<<< HEAD
       <module fileurl="file://$PROJECT_DIR$/.idea/milestone1-fe.iml" filepath="$PROJECT_DIR$/.idea/milestone1-fe.iml" />
+=======
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/MileStone1.main.iml" filepath="$PROJECT_DIR$/.idea/modules/MileStone1.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/MileStone1.test.iml" filepath="$PROJECT_DIR$/.idea/modules/MileStone1.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/PetBase.iml" filepath="$PROJECT_DIR$/.idea/PetBase.iml" />
+>>>>>>> fa089d6 (Add PetBase-frontend as a regular folder)
     </modules>
   </component>
 </project>
